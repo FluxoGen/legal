@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Velvet Arcana</title>
+<meta name="description" content="How Velvet Arcana handles your information.">
+<style>
+:root{--bg:#f6f1e7;--ink:#2a2118;--muted:#6b5d4d;--gold:#a86f1e;--line:#e2d6c0;--card:#fbf8f1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 22px 80px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25;color:var(--ink)}
+h1{font-size:2.1rem;margin:0 0 .3rem}
+h2{font-size:1.35rem;margin:2.2rem 0 .6rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+h3{font-size:1.08rem;margin:1.4rem 0 .4rem;color:var(--gold)}
+a{color:var(--gold)}
+.meta{color:var(--muted);font-size:.93rem;margin-bottom:1.6rem}
+.box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:16px 20px;margin:1.4rem 0}
+.box ul{margin:.4rem 0 0;padding-left:1.2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.97rem}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+nav{font-size:.95rem;margin-bottom:1.8rem}
+nav a{margin-right:14px}
+footer{margin-top:3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:1rem}
+</style></head>
+<body><main>
+<nav><a href="/legal/">FluxoGen legal</a><a href="/legal/velvet-arcana/privacy/">Privacy Policy</a><a href="/legal/velvet-arcana/terms/">Terms of Service</a></nav>
+
+<h1>Privacy Policy</h1>
+<div class="meta"><strong>Velvet Arcana</strong> (the “App”) · Operated by <strong>FluxoGen</strong> (“we”, “us”)<br>
+Effective date: 2 October 2026 · Applies to the closed test and early releases</div>
+
+<div class="box"><strong>In short</strong>
+<ul>
+<li>There are no accounts. We do not ask for your name, email or payment details.</li>
+<li>Your journal and settings are stored on your device.</li>
+<li>If you ask for an AI reading, your question, impressions and the cards drawn are sent over HTTPS to an AI provider so it can write the reading.</li>
+<li><strong>During the closed test</strong>, we also keep a private copy of readings and saved journal entries, together with your IP address, so we can review reading quality. We delete it when the test ends.</li>
+<li>No advertising. No analytics or crash-reporting SDKs.</li>
+</ul></div>
+
+<h2>1. Who we are</h2>
+<p>Velvet Arcana is a tarot reflection app made by FluxoGen. You can reach us at <a href="mailto:fluxogentechnologies@gmail.com">fluxogentechnologies@gmail.com</a> for any privacy question or request.</p>
+
+<h2>2. What we handle, and why</h2>
+
+<h3>2.1 Stored on your device</h3>
+<p>The App stores the following in its private storage on your phone:</p>
+<ul>
+<li>Preferences (theme, reading mode) and the state of today’s daily card</li>
+<li><strong>Journal entries</strong>: spread type, cards drawn (including reversals), your question, your impressions, any clarifying cards, and the reading text</li>
+<li>Small technical flags the App needs to run, such as whether onboarding is complete</li>
+</ul>
+<p>We do not add extra encryption beyond what Android already provides for app-private storage. Anyone with unlocked access to your phone, or to a backup of it, may be able to read this data. Uninstalling the App deletes it.</p>
+
+<h3>2.2 Sent when you ask for an AI reading</h3>
+<p>When you request a reading (or confirm the daily card), the App sends the following to our hosted relay, which forwards it to an AI model provider such as <strong>Anthropic</strong> (and, if we enable them, <strong>OpenAI</strong> or <strong>OpenRouter</strong>, which may route to another provider’s model):</p>
+<ul>
+<li>The question you typed</li>
+<li>The impressions you typed for each card</li>
+<li>Facts about the draw: card names, positions, orientation, clarifying cards, and the reading mode</li>
+</ul>
+<p>The provider’s API key stays on our server and is not inside the App. Sending this information is required for the AI reading to work. You can skip AI: leave the question and impressions blank, or do not request an interpretation. The App’s shuffle, draw and journal work without it, including in offline mode.</p>
+<p>Our relay uses your IP address to rate-limit requests and to protect the service from abuse.</p>
+
+<h3>2.3 Closed-test quality log</h3>
+<p>While the App is in closed testing, we run a <strong>private development log</strong> on our backend (hosted on Supabase). It contains:</p>
+<ul>
+<li>the full request sent to the AI provider (your question, impressions and draw facts) and the reading that came back;</li>
+<li>a copy of each journal entry when you save or update it;</li>
+<li>the IP address the request came from, the time, and which model was used.</li>
+</ul>
+<p>We use it to review the quality and safety of readings and to improve the App’s own reading method and checks. It is not shown to other testers, not sold, and not used for advertising. <strong>We delete this log when the closed test ends.</strong> This behaviour will change before any public release, and we will update this policy and the in-app notice first.</p>
+<p>Because the log is keyed to an IP address rather than an account, we usually cannot tell which entries are yours. If you want something removed, email us with the approximate date and time of your session and we will do what we can.</p>
+
+<h3>2.4 App update check</h3>
+<p>The App may ask our backend for a small public setting (the minimum and latest app version) so we can tell you when an update is available. This request does not include your journal. As with any internet request, our host sees your IP address.</p>
+
+<h3>2.5 Connectivity check</h3>
+<p>To tell whether you are online, the App looks up a public internet address (a DNS lookup) from your device. No personal content is included.</p>
+
+<h3>2.6 What we do not collect</h3>
+<ul>
+<li>Name, email address, phone number or payment details</li>
+<li>Precise location, contacts, photos or microphone</li>
+<li>Advertising identifiers</li>
+<li>Analytics events or crash reports</li>
+</ul>
+<p>The App requests only Android’s <code>INTERNET</code> permission.</p>
+
+<h2>3. Who else sees your content</h2>
+<table>
+<tr><th>Who</th><th>What they receive</th><th>Why</th></tr>
+<tr><td>AI model provider (e.g. Anthropic)</td><td>Question, impressions, draw facts</td><td>To write your reading</td></tr>
+<tr><td>Supabase (our backend host)</td><td>Request details, IP address, and during the closed test the quality log above</td><td>To run the relay, rate-limit abuse and review quality</td></tr>
+<tr><td>Google (Play Store)</td><td>Install and device information under Google’s own policies</td><td>Distribution</td></tr>
+</table>
+<p>AI providers handle the content under <strong>their</strong> terms and privacy policies, including how long they keep it and whether they use it to improve their models. We cannot control that. Please do not type anything you would not want a third-party AI service to see.</p>
+<p>We do not sell your information, and we do not share it for advertising.</p>
+
+<h2>4. How long we keep it</h2>
+<ul>
+<li><strong>On your device:</strong> until you delete the App or clear its data.</li>
+<li><strong>Closed-test quality log:</strong> until the closed test ends, then deleted.</li>
+<li><strong>Rate-limit records:</strong> short-lived operational data, not a copy of your reading.</li>
+<li><strong>AI providers:</strong> according to their own retention.</li>
+</ul>
+
+<h2>5. Your choices and rights</h2>
+<ul>
+<li>Skip AI readings, or leave the question and impressions blank.</li>
+<li>To clear your journal, uninstall the App. The App does not yet offer deleting a single entry.</li>
+<li>Depending on where you live (for example the EEA, UK, India or California), you may have rights to access, correct or delete personal data, or to object to processing. Email <a href="mailto:fluxogentechnologies@gmail.com">fluxogentechnologies@gmail.com</a> and we will respond. We cannot retrieve data that exists only on your phone, because you hold that copy.</li>
+<li>If you are in the EEA or UK, you may also complain to your local data-protection authority.</li>
+</ul>
+
+<h2>6. Children</h2>
+<p>The App is not directed at children under 13. If you are under 18, please use it with a parent or guardian. If you believe a child has sent us personal information, email us and we will delete it.</p>
+
+<h2>7. International transfers</h2>
+<p>Our backend host and AI providers may process data in the United States or other countries. Where the law requires safeguards for such transfers, we rely on the safeguards our providers offer, such as standard contractual clauses.</p>
+
+<h2>8. Security</h2>
+<p>All network requests use HTTPS, and provider API keys are kept on our server. No system is perfectly secure. A lost phone, a compromised backup or a provider incident could expose data.</p>
+
+<h2>9. Changes</h2>
+<p>When the App changes in ways that affect your data (for example accounts, cloud sync, analytics, or the end of the closed test), we will update this policy and change the date at the top. For material changes we will also tell you in the App.</p>
+
+<h2>10. Contact</h2>
+<p>FluxoGen<br><a href="mailto:fluxogentechnologies@gmail.com">fluxogentechnologies@gmail.com</a></p>
+
+<footer>FluxoGen · Velvet Arcana · <a href="mailto:fluxogentechnologies@gmail.com">fluxogentechnologies@gmail.com</a></footer>
+</main></body></html>
