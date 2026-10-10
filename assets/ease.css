@@ -18,10 +18,12 @@ a:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;border
 .ease-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;padding:4px 0 18px}
 .ease-logo{display:inline-flex;align-items:center;min-height:44px;color:var(--ink)}
 .ease-logo svg{display:block;height:28px;width:auto}
-.by{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--ink-2);font-size:.82rem;text-decoration:none}
-.by img{width:26px;height:auto;display:block}
-.by strong{color:var(--ink);font-weight:800}
-.by:hover strong{color:var(--accent-strong)}
+/* Same lockup as the app footer: 28 px mark, small "A product of" over a bold "FluxoGen". */
+.by{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--ink-2);text-decoration:none}
+.by img{width:28px;height:auto;display:block;flex:none}
+.by-text{font-size:.75rem;line-height:1.2}
+.by-text strong{display:block;color:var(--ink);font-size:.875rem;font-weight:800;letter-spacing:-.01em}
+.by:hover .by-text strong{color:var(--accent-strong)}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 .tabs a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line-strong);background:var(--card);color:var(--ink-2);font-size:.92rem;font-weight:700;text-decoration:none}
 .tabs a[aria-current="page"]{background:var(--accent-tint);border-color:var(--accent-strong);color:var(--accent-strong)}
