@@ -14,7 +14,7 @@
 
 <h1>Privacy Policy</h1>
 <div class="meta"><strong>Velvet Arcana</strong> (the “App”) · Operated by <strong>FluxoGen</strong> (“we”, “us”)<br>
-Effective date: 23 November 2026 · Applies to the closed test and early releases</div>
+Effective date: 26 November 2026 · Applies to the closed test and early releases</div>
 
 <div class="box"><strong>In short</strong>
 <ul>
@@ -34,8 +34,13 @@ Effective date: 23 November 2026 · Applies to the closed test and early release
 <h3>2.1 Stored on your device</h3>
 <p>The App stores the following in its private storage on your phone:</p>
 <ul>
-<li>Preferences (theme, reading mode) and the state of today’s daily card</li>
+<li>Preferences: theme, reading mode, and whether you draw with the App’s deck or your own</li>
+<li>Today’s daily card, your note on it and its meaning</li>
 <li><strong>Journal entries</strong>: spread type, cards drawn (including reversals), your question, your impressions, any clarifying cards, any title you give the entry, and the reading text</li>
+<li>Spread layouts you made yourself</li>
+<li>A reading still being written: its ticket and what you entered for it. The App removes it when the reading arrives, or after three hours</li>
+<li>If you have an account, your sign-in, so you stay logged in</li>
+<li>During the closed test, journal copies waiting to be sent to the quality log described in 2.3</li>
 <li>Small technical flags the App needs to run, such as whether onboarding is complete</li>
 </ul>
 <p>We do not add extra encryption beyond what Android already provides for app-private storage. Anyone with unlocked access to your phone may be able to read this data. Uninstalling the App deletes it from the phone.</p>
@@ -49,7 +54,8 @@ Effective date: 23 November 2026 · Applies to the closed test and early release
 <li>Facts about the draw: card names, positions, orientation, clarifying cards, and the reading mode</li>
 </ul>
 <p>The provider’s API key stays on our server and is not inside the App. Sending this information is required for the AI reading to work. You can skip AI: leave the question and impressions blank, or do not request an interpretation. Shuffling, drawing and the journal work without it, including when you are offline.</p>
-<p>Our relay uses your IP address to rate-limit requests and to protect the service from abuse.</p>
+<p>Our relay holds a finished reading only until the App collects it, and for at most about two and a half hours if it never does, then deletes it.</p>
+<p>Our relay uses your IP address to rate-limit requests and to protect the service from abuse. It counts how many readings each network address asks for, and what they cost, per day. Those counts hold no words from your question or reading and are kept for 35 days.</p>
 
 <h3>2.3 Closed-test quality log</h3>
 <p>While the App is in closed testing, we run a <strong>private development log</strong> on our backend (hosted on Supabase). It contains:</p>
@@ -69,7 +75,15 @@ Effective date: 23 November 2026 · Applies to the closed test and early release
 
 <h3>2.6 If you create an account</h3>
 <p>We keep your email address, and your name if you add one, with our sign-in provider so you can log back in. Signing in with Google shares only your email and name with us. An account does not copy your journal anywhere: it stays on your device.</p>
-<p>You can delete your account in the App under <strong>Settings &gt; Account &gt; Delete account</strong>. That erases it from our servers and clears the journal on that device. If you cannot open the App, follow <a href="/legal/velvet-arcana/delete-account/">how to delete your account</a>.</p>
+<p>You can delete your account in the App under <strong>Settings &gt; Account &gt; Delete account</strong>. That erases the account and everything our servers keep under it, and the App clears the journal on that device. Some things are linked only to a network address or to the coded email described in 2.7, not to your account, so we cannot find them by your account and deleting it does not remove them:</p>
+<ul>
+<li>the per-address counts described in 2.2, which hold no words and are kept for 35 days;</li>
+<li>any reading you reported, with your note (see 2.8), kept until we have reviewed it;</li>
+<li>a reading our relay was still writing for you, deleted within about two and a half hours;</li>
+<li>during the closed test, the quality log described in 2.3, deleted when the test ends;</li>
+<li>if you bought or used a plan, the coded free-reading count described in 2.7.</li>
+</ul>
+<p>If you cannot open the App, follow <a href="/legal/velvet-arcana/delete-account/">how to delete your account</a>.</p>
 
 <h3>2.7 If you buy a plan</h3>
 <p><strong>Google Play takes your payment.</strong> We never see your card, UPI or bank details. RevenueCat, the service that confirms purchases for us, receives a random account identifier and what you bought, along with the technical details any online service sees, such as your IP address.</p>
@@ -83,7 +97,10 @@ Effective date: 23 November 2026 · Applies to the closed test and early release
 <p>Deleting your account erases your plan record, your bought questions and your usage, and removes you from RevenueCat. It does <strong>not</strong> erase the coded count described above. Deleting your account also does <strong>not</strong> cancel a plan, and it does not refund anything: cancel the plan in <a href="https://play.google.com/store/account/subscriptions">Google Play</a> first. Google Play keeps its own record of your orders under Google's policies, for payments and tax; we cannot delete that.</p>
 <p>Taxes are added to the price shown by Google Play where they apply. Refunds follow the refund terms shown when you buy and in our Terms of Service.</p>
 
-<h3>2.8 What we do not collect</h3>
+<h3>2.8 If you report a reading</h3>
+<p>If you tap <strong>Report this reading</strong> and then <strong>Send report</strong>, the App sends us the text of that reading, the reason you chose, any note you add, the App version and your IP address, so we can review it. The reading text is written by the AI, so it can repeat words you gave it. Your question, impressions and journal are not sent on their own. Nothing is sent unless you tap Send report. A report is not linked to your account, and we keep it only until we have reviewed it.</p>
+
+<h3>2.9 What we do not collect</h3>
 <ul>
 <li>Card, UPI or bank details (Google Play handles payment)</li>
 <li>Name or email address, unless you create an account</li>
@@ -118,7 +135,9 @@ Effective date: 23 November 2026 · Applies to the closed test and early release
 <li><strong>On your device:</strong> until you delete the App or clear its data.</li>
 <li><strong>Closed-test quality log:</strong> until the closed test ends, then deleted.</li>
 <li><strong>Account and plan:</strong> until you delete your account, except the coded free-reading count, which we keep so free readings cannot be claimed again.</li>
-<li><strong>Rate-limit records:</strong> your IP address and a request counter for the current time window. They hold no reading content, and we clear them when the closed test ends.</li>
+<li><strong>Per-address counts:</strong> how many readings each IP address asked for, and what they cost, per day. They hold no reading content and are kept for 35 days.</li>
+<li><strong>A reading being written:</strong> until the App collects it, and at most about two and a half hours.</li>
+<li><strong>Reading reports:</strong> until we have reviewed them.</li>
 <li><strong>AI providers:</strong> according to their own retention.</li>
 </ul>
 
@@ -147,6 +166,7 @@ Effective date: 23 November 2026 · Applies to the closed test and early release
 
 <h2>Version history</h2>
 <ul>
+<li><strong>26 November 2026</strong>: listed everything the App keeps on the phone; said exactly what deleting an account removes and what stays; added reading reports, how long a reading being written is held, and that per-address counts are kept 35 days.</li>
 <li><strong>23 November 2026</strong>: added accounts (Google and email sign-in, account deletion) and paid plans (Google Play and RevenueCat, plan and usage records, the coded free-reading count).</li>
 <li><strong>2 October 2026</strong>: first version, for the closed test.</li>
 </ul>
